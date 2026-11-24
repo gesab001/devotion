@@ -1,0 +1,87 @@
+<html>
+
+
+<head>
+
+  <style>
+    body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+    #display { font-size: 3rem; margin: 20px 0; font-weight: bold; }
+    button { font-size: 1rem; padding: 10px 20px; margin: 0 5px; cursor: pointer; }
+  </style>
+
+</head>
+
+
+<body>
+
+
+<h1>TIMER</h1>
+<div id="display">15:00</div>
+  <button onclick="startTimer()">Start</button>
+  <button onclick="pauseTimer()">Pause</button>
+  <button onclick="resetTimer()">Reset</button>
+
+<h1>MEMORY VERSE</h1>
+
+
+
+<h1>ELLEN G. WHITE </h1>
+
+
+
+<h1>HYMN</h1>
+
+
+
+
+<h1>SERMON</h1>
+
+
+<h1>EXERCISE</h1>
+
+</body>
+
+<script>
+    let timeLeft = 900; // 15 minutes fix Total time in seconds
+    let timerId = null; 
+    const display = document.getElementById('display');
+
+    function updateDisplay() {
+      const minutes = Math.floor(timeLeft / 60);
+      const seconds = timeLeft % 60;
+      // Add leading zeros so 5 seconds shows as 05
+      display.textContent = 
+        `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    }
+
+    function startTimer() {
+      // Prevent multiple intervals from running at the same time
+      if (timerId !== null) return; 
+
+      timerId = setInterval(() => {
+        if (timeLeft > 0) {
+          timeLeft--;
+          updateDisplay();
+        } else {
+          clearInterval(timerId);
+          timerId = null;
+          alert("Time's up!");
+        }
+      }, 1000);
+    }
+
+    function pauseTimer() {
+      clearInterval(timerId);
+      timerId = null;
+    }
+
+    function resetTimer() {
+      pauseTimer();
+      timeLeft = 60;
+      updateDisplay();
+    }
+  </script>
+
+</html>
+
+
