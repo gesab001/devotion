@@ -8,18 +8,18 @@
     #display { font-size: 3rem; margin: 20px 0; font-weight: bold; }
     button { font-size: 1rem; padding: 10px 20px; margin: 0 5px; cursor: pointer; }
 
-  table {
-    width: 100%;
-    border-collapse: collapse; /* Merges double borders into a single line */
-  }
-  th, td {
-    border: 1px solid #dddddd;
-    padding: 8px;
-    text-align: left;
-  }
-  th {
-    background-color: #f2f2f2;
-  }
+.grid-container {
+  display: grid;
+  /* Automatically fits columns with a minimum width of 250px and maximum of 1 fraction of available space */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  gap: 1rem;
+}
+
+.column {
+  background-color: #f4f4f9;
+  padding: 20px;
+  border-radius: 8px;
+}
   
   </style>
 
@@ -37,19 +37,30 @@
   <button onclick="resetTimer()">Reset</button>
 
 <h1>MEMORY VERSE</h1>
-<table>
-  <caption>Monthly Sales Summary</caption>
-
-  <tbody>
-    <tr>
-      <td>Psalms 91</td>
-<button onclick="window.open('memoryverse.html?book=Psalms&chapter=91', 'popupWindow', 'width=500,height=400'); return false;">
-  Open Separate Page
-</button>
-    </tr>
-
-  </tbody>
-</table>
+<div class="grid-container">
+  <div class="column">
+     <button onclick="window.open('memoryverse.html?book=Psalms&chapter=91', 'popupWindow', 'width=500,height=400'); return false;">Psalms 91</button>
+  </div>
+  <div class="column"><button onclick="window.open('memoryverse.html?book=Psalms&chapter=27', 'popupWindow', 'width=500,height=400'); return false;">Psalms 27</button></div>
+  <div class="column"><button onclick="window.open('memoryverse.html?book=Psalms&chapter=27', 'popupWindow', 'width=500,height=400'); return false;">Psalms 51</button></div>
+  <div class="column"><button onclick="window.open('memoryverse.html?book=Psalms&chapter=27', 'popupWindow', 'width=500,height=400'); return false;">Psalms 23</button></div>
+  <div class="column"><button onclick="window.open('memoryverse.html?book=Psalms&chapter=27', 'popupWindow', 'width=500,height=400'); return false;">Beatitudes</button></div>
+  <div class="column"><button onclick="window.open('memoryverse.html?book=Psalms&chapter=27', 'popupWindow', 'width=500,height=400'); return false;">Salt of the Earth</button></div>
+  <div class="column"><button onclick="window.open('memoryverse.html?book=Psalms&chapter=27', 'popupWindow', 'width=500,height=400'); return false;">Adultery</button></div>
+  <div class="column"><button onclick="window.open('memoryverse.html?book=Psalms&chapter=27', 'popupWindow', 'width=500,height=400'); return false;">Love Chapter</button></div>
+  <div class="column"><button onclick="window.open('memoryverse.html?book=Psalms&chapter=27', 'popupWindow', 'width=500,height=400'); return false;">Hebrews 11</button></div>
+  <div class="column"><button onclick="window.open('memoryverse.html?book=Psalms&chapter=27', 'popupWindow', 'width=500,height=400'); return false;">Hannah</button></div>
+  <div class="column"><button onclick="window.open('memoryverse.html?book=Psalms&chapter=27', 'popupWindow', 'width=500,height=400'); return false;">Abigail</button></div>
+  <div class="column"><button onclick="window.open('memoryverse.html?book=Psalms&chapter=27', 'popupWindow', 'width=500,height=400'); return false;">Revelation 1</button></div>
+  <div class="column"><button onclick="window.open('memoryverse.html?book=Psalms&chapter=27', 'popupWindow', 'width=500,height=400'); return false;">Revelation 2</button></div>
+  <div class="column"><button onclick="window.open('memoryverse.html?book=Psalms&chapter=27', 'popupWindow', 'width=500,height=400'); return false;">Revelation 3</button></div>  
+  <div class="column"><button onclick="window.open('memoryverse.html?book=Psalms&chapter=27', 'popupWindow', 'width=500,height=400'); return false;">Revelation 4</button></div>
+  <div class="column"><button onclick="window.open('memoryverse.html?book=Psalms&chapter=27', 'popupWindow', 'width=500,height=400'); return false;">Revelation 5</button></div>
+  <div class="column"><button onclick="window.open('memoryverse.html?book=Psalms&chapter=27', 'popupWindow', 'width=500,height=400'); return false;">Revelation 6</button></div>  
+  <div class="column"><button onclick="window.open('memoryverse.html?book=Psalms&chapter=27', 'popupWindow', 'width=500,height=400'); return false;">Revelation 7</button></div>
+  <div class="column"><button onclick="window.open('memoryverse.html?book=Psalms&chapter=27', 'popupWindow', 'width=500,height=400'); return false;">Revelation 8</button></div>
+  <div class="column"><button onclick="window.open('memoryverse.html?book=Psalms&chapter=27', 'popupWindow', 'width=500,height=400'); return false;">Revelation 9</button></div>    
+</div>
 
 
 <h1>ELLEN G. WHITE </h1>
