@@ -3,6 +3,7 @@
 
 <head>
 
+
   <style>
     body { font-family: sans-serif; text-align: center; margin-top: 50px; }
     #display { font-size: 3rem; margin: 20px 0; font-weight: bold; }
@@ -21,6 +22,14 @@
   border-radius: 8px;
 }
   
+div.sticky {
+  position: sticky;
+  top: 0;
+  padding: 5px;
+  background-color: #cae8ca;
+  border: 2px solid #4CAF50;
+}  
+  
   </style>
 
 
@@ -30,8 +39,10 @@
 <body>
 
 
+
 <h1>TIMER</h1>
-<div id="display">15:00</div>
+
+<div class="sticky" id="display">15:00</div>
   <button onclick="startTimer()">Start</button>
   <button onclick="pauseTimer()">Pause</button>
   <button onclick="resetTimer()">Reset</button>

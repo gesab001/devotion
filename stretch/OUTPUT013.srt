@@ -1,0 +1,20 @@
+1
+00:00:00,000 --> 00:00:18,000
+And circles, one, two, three, four, five, the other direction, and one, two, three, four, five, okay?
+
+2
+00:00:18,000 --> 00:00:41,000
+All right, now let's face the side, one, two, three, four, five, okay, the other side, and one, two, three, four, five, okay.
+
+3
+00:00:41,000 --> 00:00:43,000
+All right, let's take a block.
+
+4
+00:00:55,000 --> 00:00:57,000
+Okay.
+
+5
+00:00:57,000 --> 00:01:00,000
+Take it forward.
+
