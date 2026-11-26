@@ -1,0 +1,164 @@
+{
+  "items": [
+    {
+      "book": "Psalms",
+      "chapter": 91
+    },
+    {
+      "book": "Psalms",
+      "chapter": 27
+    },
+    {
+      "book": "Psalms",
+      "chapter": 51
+    },
+    {
+      "book": "Psalms",
+      "chapter": 23
+    },
+	{
+      "book": "Exodus",
+      "chapter": 20,
+	  "start": 1,
+	  "end": 17,
+	  "title": "The Ten Commandments"
+    },
+    {
+      "book": "Matthew",
+      "chapter": 5,
+	    "start" : 1,
+	    "end": 12,
+	    "title": "Beatitudes"
+    },
+    {
+      "book": "1 Corinthians",
+      "chapter": 13,
+	    "title": "Love Chapter"
+    },
+    {
+      "book": "Hebrews",
+      "chapter": 11
+    },
+    {
+      "book": "Revelation",
+      "chapter": 1
+    },
+    {
+      "book": "Revelation",
+      "chapter": 2
+    },
+    {
+      "book": "Revelation",
+      "chapter": 3
+    },	
+    {
+      "book": "Revelation",
+      "chapter": 4
+    },
+    {
+      "book": "Revelation",
+      "chapter": 5
+    },
+    {
+      "book": "Revelation",
+      "chapter": 6
+    },
+    {
+      "book": "Revelation",
+      "chapter": 7
+    },
+    {
+      "book": "Revelation",
+      "chapter": 8
+    },
+    {
+      "book": "Revelation",
+      "chapter": 9
+    },
+    {
+      "book": "Revelation",
+      "chapter": 10
+    },
+    {
+      "book": "Revelation",
+      "chapter": 11
+    },    {
+      "book": "Revelation",
+      "chapter": 12
+    },    {
+      "book": "Revelation",
+      "chapter": 13
+    },    {
+      "book": "Revelation",
+      "chapter": 14
+    },    {
+      "book": "Revelation",
+      "chapter": 15
+    },    {
+      "book": "Revelation",
+      "chapter": 16
+    },    {
+      "book": "Revelation",
+      "chapter": 17
+    },    {
+      "book": "Revelation",
+      "chapter": 18
+    },    {
+      "book": "Revelation",
+      "chapter": 19
+    },    {
+      "book": "Revelation",
+      "chapter": 20
+    },    {
+      "book": "Revelation",
+      "chapter": 21
+    },    {
+      "book": "Revelation",
+      "chapter": 22
+    },    {
+      "book": "Daniel",
+      "chapter": 1
+    },    {
+      "book": "Daniel",
+      "chapter": 2
+    },    {
+      "book": "Daniel",
+      "chapter": 3
+    },    {
+      "book": "Daniel",
+      "chapter": 4
+    },    {
+      "book": "Daniel",
+      "chapter": 5
+    },    {
+      "book": "Daniel",
+      "chapter": 6
+    },    {
+      "book": "Daniel",
+      "chapter": 7
+    },    {
+      "book": "Daniel",
+      "chapter": 8
+    },    {
+      "book": "Daniel",
+      "chapter": 9
+    },    {
+      "book": "Daniel",
+      "chapter": 10
+    },    {
+      "book": "Daniel",
+      "chapter": 11
+    },    {
+      "book": "Daniel",
+      "chapter": 12
+    },    {
+      "book": "James",
+      "chapter": 1
+    },    {
+      "book": "Leviticus",
+      "chapter": 23,
+	    "title": "The Seven Feasts"
+    }														
+	
+  ]
+}
