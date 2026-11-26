@@ -30,6 +30,10 @@ div.sticky {
   border: 2px solid #4CAF50;
 }  
   
+.clicked {
+  background-color: #28a745;
+  color: white;
+}
   </style>
 
 
@@ -336,6 +340,14 @@ div.sticky {
       timeLeft = 900;
       updateDisplay();
     }
+	
+	const buttonsWithoutId = document.querySelectorAll('button:not([id])');
+
+buttonsWithoutId.forEach(button => {
+  button.addEventListener('click', () => {
+    button.classList.toggle('clicked');
+  });
+});
   </script>
 
 </html>
