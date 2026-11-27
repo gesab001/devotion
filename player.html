@@ -21,6 +21,8 @@
 	folder = params.get("folder");
     player.src = folder + "/" + params.get("video");
     track.src = folder + "/" + params.get("vtt");
+	player.poster = folder + "/" + params.get("video").replace("mp4", "png");
+	
 
 	
   </script>

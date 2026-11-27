@@ -23,10 +23,11 @@ for x in range(0, len(mp4s)):
     title = mp4s[x]
     videoSrc = title
     vttSrc = title.replace("mp4", "vtt")
+    poster = title.replace("mp4", "png")
     folder = "sermons"
 
     link = "http://localhost:8000/player.html?video="+videoSrc+"&vtt="+vttSrc+"&folder="+folder
-    html_link =  '<div class="column"><button onclick="window.open'+"('"+link
+    html_link =  '<div class="column"'+ 'style="aspect-ratio: 16 / 9; '+ "background-image: url('"+folder+"/"+poster+"'"+'); background-size: cover;"><button onclick="window.open'+"('"+link
     html_title = html_link + "', 'videoWindow', 'width=800,height=450,noopener,noreferrer')"+'; return false;"'+">"+title+"</button></div>"
     print(html_title)
 
