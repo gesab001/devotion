@@ -21,8 +21,8 @@
 	folder = params.get("folder");
 	localVideoSource = folder + "/" + params.get("video");
 	internetVideoSource = "https://gesab001.github.io/videos/"+ localVideoSource;
-	const sources = [  { src: localVideoSource, type: 'video/mp4' },
-	  { src: internetVideoSource, type: 'video/mp4'}
+	const sources = [  { src: internetVideoSource, type: 'video/mp4' },
+	  { src: localVideoSource, type: 'video/mp4'}
 	];
 
 	sources.forEach(item => {
