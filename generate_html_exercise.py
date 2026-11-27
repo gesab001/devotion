@@ -26,8 +26,8 @@ for x in range(0, len(mp4s)):
     vttSrc = title.replace("mp4", "vtt")
     buttonTitle = folder.title() + " " + str(x)
     poster = title.replace("mp4", "png")
-    link = "http://localhost:8000/player.html?video="+videoSrc+"&vtt="+vttSrc+"&folder="+folder
-    html_link =  '<div class="column"'+ 'style="aspect-ratio: 16 / 9; '+ "background-image: url('"+folder+"/"+poster+"'"+'); background-size: cover;"><button onclick="window.open'+"('"+link
-    html_title = html_link + "', 'videoWindow', 'width=800,height=450,noopener,noreferrer')"+'; return false;"'+">"+title+"</button></div>"
-    print(html_title)
+    link = "player.html?video="+videoSrc+"&vtt="+vttSrc+"&folder="+folder
+    aTag = '<a href="'+ link +'" target="_blank" rel="noopener noreferrer" onclick="window.open(this.href, '+"'videoWindow', 'width=800,height=450,noopener,noreferrer'); return false;"+'">'              
+    html_link =  aTag + '<div class="column"'+ 'style="aspect-ratio: 16 / 9; '+ "background-image: url('"+folder+"/"+poster+"'"+'); background-size: cover;">'+"</div></a>"
+    print(html_link)
 
