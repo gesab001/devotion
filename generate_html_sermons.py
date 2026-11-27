@@ -27,8 +27,9 @@ for x in range(0, len(mp4s)):
     folder = "sermons"
 
 
-    link = "player.html?video="+videoSrc+"&vtt="+vttSrc+"&folder="+folder
+    link = "http://localhost:8000/player.html?video="+videoSrc+"&vtt="+vttSrc+"&folder="+folder
+    background_image_backup = "https://gesab001.github.io/videos/"+folder+"/"+poster
     aTag = '<a href="'+ link +'" target="_blank" rel="noopener noreferrer" onclick="window.open(this.href, '+"'videoWindow', 'width=800,height=450,noopener,noreferrer'); return false;"+'">'              
-    html_link =  aTag + '<div class="column"'+ 'style="aspect-ratio: 16 / 9; '+ "background-image: url('"+folder+"/"+poster+"'"+'); background-size: cover;">'+"</div></a>"
+    html_link =  aTag + '<div class="column"'+ 'style="aspect-ratio: 16 / 9; '+ "background-image: url('"+folder+"/"+poster+"'"+'), '+ "url('"+background_image_backup+"'"+')'+'; background-size: cover;">'+"</div></a>"
     print(html_link)
 
