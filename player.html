@@ -19,10 +19,25 @@
     const track = document.getElementById("subtitles");
 
 	folder = params.get("folder");
-    player.src = folder + "/" + params.get("video");
+	localVideoSource = folder + "/" + params.get("video");
+	internetVideoSource = "https://gesab001.github.io/videos/"+ localVideoSource;
+	const sources = [  { src: localVideoSource, type: 'video/mp4' },
+	  { src: internetVideoSource, type: 'video/mp4'}
+	];
+
+	sources.forEach(item => {
+	  const source = document.createElement('source');
+	  source.src = item.src;
+	  source.type = item.type;
+	  player.appendChild(source);
+	});
+
+	// Tell the video element to evaluate the new sources
+
+    //player.src = folder + "/" + params.get("video");
     track.src = folder + "/" + params.get("vtt");
 	player.poster = folder + "/" + params.get("video").replace("mp4", "png");
-	
+	player.load();	
 
 	
   </script>
