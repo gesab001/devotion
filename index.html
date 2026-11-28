@@ -36,7 +36,12 @@ div.sticky {
   color: white;
 }
 
-
+/* Watched state */
+.item-tag.is-watched {
+  opacity: 0.5;
+  filter: grayscale(80%);
+  border-left: 4px solid #4CAF50;
+}
   </style>
 
 
@@ -350,6 +355,36 @@ buttonsWithoutId.forEach(button => {
   button.addEventListener('click', () => {
     button.classList.toggle('clicked');
   });
+});
+
+
+const links = document.querySelectorAll('a');
+const searchString = 'example';
+
+// 2. Loop through and check if the string is in the href
+links.forEach(link => {
+  console.log(link.href);
+  const url = new URL(link.href);
+
+  // Get specific parameter values
+  const video = url.searchParams.get("video"); // "shoes"
+  const folder = url.searchParams.get("folder");   
+  console.log(video);
+  console.log(folder);  // "blue"
+  // Check if already completed on page load
+  if (localStorage.getItem(folder+"_"+video+"_finished") === 'true') {
+	console.log('User already finished this video.');
+	if (link.querySelector('div')) {
+    link.style.opacity = '0.5'; // Set your desired opacity (0 to 1)
+	link.style.border = '2px solid #007bff';
+    
+    // Optional: Ensure the <a> tag wraps the inner <div> properly
+    link.style.display = 'inline-block'; 
+    }
+  }else{
+	console.log("User hasn't watched this video");
+  }
+
 });
   </script>
 

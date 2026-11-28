@@ -32,13 +32,27 @@
 	  player.appendChild(source);
 	});
 
+	const sources_track = [  { src: internetVideoSource, type: 'video/mp4' },
+	  { src: localVideoSource, type: 'video/mp4'}
+	];
 	// Tell the video element to evaluate the new sources
 
     //player.src = folder + "/" + params.get("video");
     track.src = folder + "/" + params.get("vtt");
 	player.poster = folder + "/" + params.get("video").replace("mp4", "png");
 	player.load();	
-
+	
+	  // Check if already completed on page load
+	  if (localStorage.getItem(folder+"_"+params.get("video")+"_finished") === 'true') {
+		console.log('User already finished this video.');
+	  }else{
+	    console.log("User hasn't watched this video");
+	  }
+	  // Update localStorage when the video finishes
+	  player.addEventListener('ended', () => {
+		localStorage.setItem(folder+"_"+params.get("video")+"_finished", 'true');
+		console.log('Video finished! Progress saved.');
+	  });
 	
   </script>
 </body>
